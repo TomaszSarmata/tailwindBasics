@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/dist/output.css" />
+  </head>
+  <body>
+    <main class="p-5">
+      <h1 class="text-center text-xl text-green-500">Hello World</h1>
+      <div
+        class="w-full h-10 bg-violet-200 border-violet-600 border-2 rounded-md my-4 p-2"
+      >
+        <p class="text-center font-mono font-extrabold">A div</p>
+      </div>
+
+      <div class="fixed w-10 h-10 bg-red-500 top-0"></div>
+      <div class="h-20 bg-pink-50 flex justify-center items-center space-x-5">
+        <div class="h-16 w-16 rounded-full bg-blue-500"></div>
+        <div class="h-16 w-16 rounded-full bg-blue-500"></div>
+        <div class="h-16 w-16 rounded-full bg-blue-500"></div>
+      </div>
+      <div class="grid grid-cols-5 gap-2 mt-3">
+        <div class="bg-violet-500 h-12"></div>
+        <div class="bg-violet-500 h-12"></div>
+        <div class="bg-violet-500 h-12"></div>
+        <div class="bg-violet-500 h-12"></div>
+        <div class="bg-violet-500 h-12"></div>
+      </div>
+      <div class="md:block hidden bg-red-50">
+        <p class="text-blue-500">
+          I will appear for the device resolution > 768px
+        </p>
+      </div>
+      <div class="max-md:block hidden bg-slate-200">
+        <p class="text-yellow-500">
+          I will appear for the device resolution < 768px
+        </p>
+      </div>
+      <div class="sm:block hidden bg-yellow-50">
+        <p class="text-red-500">
+          I will appear for the device resolution > 640px
+        </p>
+      </div>
+      <button
+        class="my-2 rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-blue-700 focus:ring focus:outline-none focus:ring-blue-500 active:bg-blue-800"
+      >
+        Click me
+      </button>
+      <ul class="my-2 space-y-2">
+        <li class="bg-white p-2 first:bg-yellow-200">0</li>
+        <li
+          class="bg-white p-2 first:bg-yellow-200 odd:bg-blue-200 even:bg-green-200"
+        >
+          1
+        </li>
+        <li
+          class="bg-white p-2 first:bg-yellow-200 odd:bg-blue-200 even:bg-green-200"
+        >
+          2
+        </li>
+        <li
+          class="bg-white p-2 first:bg-yellow-200 odd:bg-blue-200 even:bg-green-200"
+        >
+          3
+        </li>
+        <li
+          class="bg-white p-2 first:bg-yellow-200 odd:bg-blue-200 even:bg-green-200"
+        >
+          4
+        </li>
+      </ul>
+
+      <div class="card">
+        <h3
+          class="text-base font-medium tracking-tight text-slate-900 dark:text-white"
+        >
+          This is a text element
+        </h3>
+        <p class="mt-2 text-sm text-slate-500 dark:text-blue-100">
+          This is an even longer p tag element
+        </p>
+
+        <button
+          id="toggleDark"
+          class="text-blue-900 px-4 py-2 bg-blue-100 text-sm font-medium mt-8 rounded-md"
+          onclick="document.body.classList.toggle('dark')"
+        >
+          Toggle Dark Mode
+        </button>
+      </div>
+
+      <p class="text-2xl text-CHESTNUT bg-stone-100 p-2">Chestnut Color</p>
+    </main>
+  </body>
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleDark = document.getElementById("toggleDark");
+      toggleDark.addEventListener("click", function () {
+        if (document.documentElement.classList.includes("dark")) {
+          document.documentElement.classList.remove("dark");
+        } else {
+          document.documentElement.classList.add("dark");
+        }
+        alert("click");
+      });
+    });
+  </script>
+</html>
